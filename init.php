@@ -18,7 +18,7 @@ add_action ( 'plugins_loaded', array (
 ) );
 add_action ( 'activated_plugin', 'wpafa_plugin_activation_hook', 10, 2 );
 add_action ( 'deactivated_plugin', 'wpafa_plugin_deactivation_hook', 10, 2 );
-
+add_action ( 'wp_enqueue_scripts', 'wpafa_enqueue_scripts' );
 // Actions Functions
 function wpafa_plugin_activation_hook($plugin, $network_activation) {
 	if ($plugin == 'wp-afa/init.php') {
@@ -43,4 +43,10 @@ function log_to_file($content) {
 	$content = var_export ( $content, TRUE );
 	
 	// file_put_contents ( 'D:\\temps\\wpafa-log.txt', "\n--------------\n$content", FILE_APPEND );
+}
+function wpafa_enqueue_scripts() {
+	wp_enqueue_script ( 'wpafa-angular', plugin_dir_url ( __FILE__ ) . 'js/angular.min.js', array (), '1.5.6', true );
+	wp_enqueue_script ( 'wpafa-ng-main', plugin_dir_url ( __FILE__ ) . 'js/wpafa.js', array (
+			'wpafa-angular' 
+	), '0.1.0', true );
 }
