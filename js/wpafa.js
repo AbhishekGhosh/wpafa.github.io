@@ -9,6 +9,7 @@ var wpafaNgApp = angular.module("wpafaMainModule", []);
 
 wpafaNgApp.controller("wpafaCoreController", ['$scope', '$http', function ($scope, $http) {
 
+    // Debug & Console Messages
     var logging = {
         enabled: true,
         toConsole: function (logData) {
@@ -18,7 +19,16 @@ wpafaNgApp.controller("wpafaCoreController", ['$scope', '$http', function ($scop
             }
         }
     };
-
+    // App Configuration
+    $scope.appConfig = {
+        baseurl: ''
+    }
+    $scope.init = function (baseurl) {
+        if (baseurl.toString().slice(-1) != "/") {
+            baseurl = baseurl + "/";
+        }
+        $scope.appConfig.baseurl = baseurl;
+    }
 
 
     $scope.dataService = {};
@@ -33,7 +43,7 @@ wpafaNgApp.controller("wpafaCoreController", ['$scope', '$http', function ($scop
         logging.toConsole(['wp-afa: Request Sent', requestData]);
         $http({
             method: 'POST',
-            url: $scope.appConfig.params.baseurl + 'wpafa-api',
+            url: $scope.appConfig.baseurl + 'wpafa-api',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
@@ -65,4 +75,4 @@ wpafaNgApp.controller("wpafaCoreController", ['$scope', '$http', function ($scop
             });
         });
     };
-}]);
+            }]);
