@@ -1,4 +1,6 @@
-# WordPress - Application Framework using AngularJS
+# WordPress - Application Framework using AngularJS (wp-afa)
+
+![WordPress - Application Framework using AngularJS](http://hasanhalabi.github.io/wpafa.github.io/images/Logo.png)
 
 ## About the Plugin.
 
