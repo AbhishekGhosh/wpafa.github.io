@@ -7,15 +7,14 @@
 */
 var wpafaNgApp = angular.module("wpafaMainModule", []);
 
-wpafaNgApp.controller("wpafaCoreController", ['$scope', '$http', function ($scope, $http) {
+wpafaNgApp.controller("wpafaCoreController", ['$rootScope', '$scope', '$http', function ($rootScope, $scope, $http) {
 
     // Debug & Console Messages
     var logging = {
         enabled: true,
         toConsole: function (logData) {
             if (this.enabled) {
-                logging.toConsole(logData);
-
+                console.log(logData);
             }
         }
     };
@@ -30,10 +29,15 @@ wpafaNgApp.controller("wpafaCoreController", ['$scope', '$http', function ($scop
         $scope.appConfig.baseurl = baseurl;
     }
 
+    $scope.initWithRequest = function (baseurl, theDomain, theDataSource, theDataSegment, theParams, theDataKey) {
+        $scope.init(baseurl);
+        $scope.dataService.processRequest(theDomain, theDataSource, theDataSegment, theParams, theDataKey);
+    }
+
 
     $scope.dataService = {};
-    $scope.dataService.processRequest = function (theDomain, theDataSource, theDataSegment, theParams, dataKey) {
-        $scope.$emit('event:requestSent');
+    $scope.dataService.processRequest = function (theDomain, theDataSource, theDataSegment, theParams, theDataKey) {
+        $rootScope.$emit('wpafa:requestSent');
         var requestData = {
             domain: theDomain,
             datasource: theDataSource,
@@ -54,14 +58,15 @@ wpafaNgApp.controller("wpafaCoreController", ['$scope', '$http', function ($scop
             if (response.data.result == "ok") {
                 logging.toConsole(['wp-afa: Data Ok!', response.data.theData]);
 
-                $scope.$emit('event:responseReturned', {
+                $rootScope.$emit('wpafa:responseReturned', {
                     valid: true,
+                    dataKey: theDataKey,
                     data: response.data.theData
                 });
             } else {
                 logging.toConsole(['wp-afa: Data NOT Ok!', response.data.theData]);
-                $scope.$emit('event:responseReturned', {
-                    valid: false,
+                $rootScope.$emit('wpafa:responseReturned', {
+                    key: dataKey,
                     data: response.data.theData
                 });
             }
@@ -69,7 +74,7 @@ wpafaNgApp.controller("wpafaCoreController", ['$scope', '$http', function ($scop
         }, function (response) {
             // Failed
             logging.toConsole(['wp-afa: $http Failed', response]);
-            $scope.$emit('event:responseReturned', {
+            $rootScope.$emit('wpafa:event:responseReturned', {
                 valid: false,
                 data: response
             });

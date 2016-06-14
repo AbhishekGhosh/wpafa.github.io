@@ -41,10 +41,10 @@ class wpafa_api {
 		}
 	}
 	public static function process_request($requestData) {
-		$namespace = str_replace ( '-', '_', $operationData->domain );
-		$class_name = str_replace ( '-', '_', $operationData->datasource );
-		$function_name = str_replace ( '-', '_', $operationData->datasegment );
-		$params = $operationData->params;
+		$namespace = str_replace ( '-', '_', $requestData->domain );
+		$class_name = str_replace ( '-', '_', $requestData->datasource );
+		$function_name = str_replace ( '-', '_', $requestData->datasegment );
+		$params = $requestData->params;
 		
 		if (! empty ( $namespace )) {
 			$class_name = sprintf ( '%1$s\\%2$s', $namespace, $class_name );
