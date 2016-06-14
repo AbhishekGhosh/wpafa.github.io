@@ -40,9 +40,9 @@ function wpafa_include_directory($path) {
 	}
 }
 function log_to_file($content) {
-	$content = var_export ( $content, TRUE );
+	/* $content = var_export ( $content, TRUE );
 	
-	// file_put_contents ( 'D:\\temps\\wpafa-log.txt', "\n--------------\n$content", FILE_APPEND );
+	file_put_contents ( 'D:\\temps\\wpafa-log.txt', "\n--------------\n$content", FILE_APPEND ); */
 }
 function wpafa_enqueue_scripts() {
 	wp_enqueue_script ( 'wpafa-angular', plugin_dir_url ( __FILE__ ) . 'js/angular.min.js', array (), '1.5.6', true );
