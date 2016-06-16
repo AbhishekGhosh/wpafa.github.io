@@ -1,0 +1,18 @@
+@import url('tables-min.css');
+@import url('buttons-core-min.css');
+@import url('buttons-min.css');
+.pure-table {
+    font-size: 80%;
+}
+.pure-table .dont-break {
+    white-space: nowrap;
+}
+.link-button {
+    font-size: 80%;
+    background-color: transparent;
+    color: #333;
+}
+.link-button:hover,
+.link-button:focus {
+    color: #fff;
+}
