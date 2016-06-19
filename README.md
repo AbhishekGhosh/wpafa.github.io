@@ -57,33 +57,35 @@ Currently I'm the only developer for the project. You can find me on GitHub [@ha
 
 A complete documentation is going to be placed on the Project Wiki. The documentation is not ready at the moment. We hope we can write it very soon.
 
-## Donations
+## Get You Hand On The Original Framework
 
-As many out there, we are looking to pay bills and on the same time reduce the working hours so we could focus more on the project. So we do accept donations to help us adding new features and fix the bugs of the public plugins, but we don’t like to accept donations for free, so we will give you something back in return.
+The plugin contains a subset of the original framework. The complete framework contain the following feature:
 
-* If you donate less than **100$**, we will add your name in the donors list with a big thanks.
-* If you donate **100$**, we will send you the source code for the framework we are using to build the business applications including:
+ * Users and Roles managements.
+ * Dynamic Menu Building depending on the roles.
+ * Dashboard building depending on the roles.
+ * Reports listing.
+ * Form validations.
+ * REST API Page.
+ * Custom login page.
+ * Basic AngularJS controllers
+ * And more…
+
+The following are our packages for providing the framework:
+
+* For **100$**, we will send you the source code for the framework we are using to build the business applications including:
   * The WordPress theme we are using with all of its components.
-  * The plugins we built to facilitate all the features exists in the framework such as:
-    * Users and Roles managements.
-    * Dynamic Menu Building depending on the roles.
-    * Dashboard building depending on the roles.
-    * Reports listing.
-    * Form validations.
-    * REST API Page.
-    * Custom login page.
-    * Basic AngularJS controllers
-    * And more…
+  * The plugins we built to facilitate all the features exists in the framework.
   * Simple documentation on how to use the WordPress Themes and Plugins (framework) to create business applications.
   * A sample project of two pages (Contact List, and Donations Receipts) to demonstrate the usage of the framework.
-* If you donate **300$**, we will do the following:
+* For **300$**, we will do the following:
   * Send you the source code of the framework including all its features.
   * Answer 2 tickets to help you start using it.
-* If you donate **500$**, we will do the following:
+* For **500$**, we will do the following:
   * Send you the source code of the framework including all its features.
   * Answer 2 tickets to help you start using it.
   * Build any 2 pages on your request.
-* If you donate **1000$**, we will do the following:
+* For **1000$**, we will do the following:
   * Send you the source code of the framework including all its features.
   * Answer 4 tickets to help you start using it.
   * Build any 4 pages on your request.
@@ -91,6 +93,6 @@ As many out there, we are looking to pay bills and on the same time reduce the w
 
 About the Framework license. I am the founder of the firm who created it. I have a partner, and we agreed to distribute under **MIT License**.
 
-You can use [PayPal](https://www.paypal.com/myaccount/transfer/buy) to send us your donations. Just [click here](https://www.paypal.com/myaccount/transfer/buy)  and send the amount you want to hasanhalabi@gmail.com.
+You can contact me anytime on [hasanhalabi@gmail.com](mailto:hasanhalabi@gmail.com).
 
 Many Thanks In Advance For All Of You.
