@@ -91,7 +91,7 @@ The following are our packages for providing the framework:
   * Build any 4 pages on your request.
   * Open a live Skype call with you to explain the code line by line and go through all the details of the framework.
 
-About the Framework license. I am the founder of the firm who created it. I have a partner, and we agreed to distribute under **MIT License**.
+About the Framework license. I am the founder of the firm who created it. I have a partner, and we agreed to distribute under [Apache License 2.0](http://choosealicense.com/licenses/apache-2.0/).
 
 You can contact me anytime on [hasanhalabi@gmail.com](mailto:hasanhalabi@gmail.com).
 
